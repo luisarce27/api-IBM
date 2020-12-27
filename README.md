@@ -14,6 +14,7 @@ Installation process 🔧
 Once having the VS Code installed you have to download extensions of Go and Docker
 
 Unit Testing ⚙️
+
 Once you have downloaded and built the project well you can check via the unit testing the methods of the Api, just running the following code:
 (go test --cover)
 
