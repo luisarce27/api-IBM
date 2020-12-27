@@ -19,6 +19,7 @@ Once you have downloaded and built the project well you can check via the unit t
 (go test --cover)
 
 Example⌨️
+
 Open the Postman and go to create a POST request
 Complete the URL with http://localhost:8000/api/encrypt to test encrypt method or http://localhost:8000/api/dencrypt to test the dencrypt method
 With the Encrypt
