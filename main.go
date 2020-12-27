@@ -1,5 +1,6 @@
 package main
 
+//Creation of imports
 import (
 	"encoding/json"
 	"log"

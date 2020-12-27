@@ -1,11 +1,12 @@
 package main
 
-
+//Creation of imports
 import (
 	"fmt"
     "testing"
 )
 
+//Creation of unit testing
 func Test_Encrypt_Succesfully(t *testing.T){
 	var data string = "Texto a encriptar"
 	

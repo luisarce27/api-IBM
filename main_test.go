@@ -1,6 +1,6 @@
 package main
 
-
+//Creation of imports
 import (
 
 	"testing"
@@ -10,10 +10,10 @@ import (
 
 )
 
+//Creation of unit testing
 func Test_API_Encrypt_Succesfully(t *testing.T){
 	body := bytes.NewBufferString(`"sdfsd"`)
 
-	//client := &http.Client{}
 	req, err := http.NewRequest("POST", "/encrypt", body)
 	
 	if err != nil{
@@ -24,8 +24,6 @@ func Test_API_Encrypt_Succesfully(t *testing.T){
 
 	encrypt(recorder, req)
 	
-	//response, err := client.Do(req)
-
     if recorder.Code != http.StatusOK{
 		t.Errorf("Se esperaba status 200. Respuesta %d", recorder.Code)
 	}
@@ -53,7 +51,6 @@ func Test_API_Encrypt_Empty(t *testing.T){
 func Test_API_Dencrypt_Succesfully(t *testing.T){
 	body := bytes.NewBufferString(`"a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b4"`)
 
-	//client := &http.Client{}
 	req, err := http.NewRequest("POST", "/dencrypt", body)
 	
 	if err != nil{
@@ -64,8 +61,6 @@ func Test_API_Dencrypt_Succesfully(t *testing.T){
 
 	dencrypt(recorder, req)
 	
-	//response, err := client.Do(req)
-
     if recorder.Code != http.StatusOK{
 		t.Errorf("Se esperaba status 200. Respuesta %d", recorder.Code)
 	}
