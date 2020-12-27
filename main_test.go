@@ -11,6 +11,7 @@ import (
 )
 
 //Creation of unit testing
+//Testing if the Encrypt works fine, checking status
 func Test_API_Encrypt_Succesfully(t *testing.T){
 	body := bytes.NewBufferString(`"sdfsd"`)
 
@@ -28,7 +29,7 @@ func Test_API_Encrypt_Succesfully(t *testing.T){
 		t.Errorf("Se esperaba status 200. Respuesta %d", recorder.Code)
 	}
 }
-
+//Tetsing the response in case of a encrypt empty
 func Test_API_Encrypt_Empty(t *testing.T){
 	body := bytes.NewBufferString(`""`)
 
@@ -47,7 +48,7 @@ func Test_API_Encrypt_Empty(t *testing.T){
 	}
 }
 
-
+//Testing the response in case of dencrypt successfull
 func Test_API_Dencrypt_Succesfully(t *testing.T){
 	body := bytes.NewBufferString(`"a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b4"`)
 
@@ -65,7 +66,7 @@ func Test_API_Dencrypt_Succesfully(t *testing.T){
 		t.Errorf("Se esperaba status 200. Respuesta %d", recorder.Code)
 	}
 }
-
+//Testing the response in case of dencrypt empty
 func Test_API_Dencrypt_Empty(t *testing.T){
 	body := bytes.NewBufferString(`""`)
 
@@ -83,7 +84,7 @@ func Test_API_Dencrypt_Empty(t *testing.T){
 		t.Errorf("Se esperaba status 500. Respuesta %d", recorder.Code)
 	}
 }
-
+//Testing the response of dencrypt case of wrong lenght
 func Test_API_Dencrypt_WrongLength(t *testing.T){
 	body := bytes.NewBufferString(`"a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b"`)
 
@@ -101,7 +102,7 @@ func Test_API_Dencrypt_WrongLength(t *testing.T){
 		t.Errorf("Se esperaba status 500. Respuesta %d", recorder.Code)
 	}
 }
-
+//Testing the response of dencrypt case of wrong text
 func Test_API_Dencrypt_WrongText(t *testing.T){
 	body := bytes.NewBufferString(`"a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b0"`)
 

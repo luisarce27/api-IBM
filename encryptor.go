@@ -44,7 +44,7 @@ func encryptText(rawText string) (string, error){
 		return "", err
     }
 
-	//  encryption oftext using the Seal function
+	//Encryption oftext using the Seal function
 	//Using hexadecimal
    	result := gcm.Seal(nonce, nonce, text, nil)
 	encryptedText := hex.EncodeToString(result)
@@ -58,7 +58,7 @@ func encryptText(rawText string) (string, error){
 //Creation of decrytion function
 func dencryptText(encryptedText string) (string, error){
 
-	text, err := hex.DecodeString(encryptedText)
+	text, err := hex.DecodeString(encryptedText)//Receive the encrypted text 
 	if err != nil {
 		return "", err
 	}
@@ -89,6 +89,6 @@ func dencryptText(encryptedText string) (string, error){
 	
 	rawText := string(decryptedText)
 
-	fmt.Println(rawText)
+	fmt.Println(rawText)//return the decrypted text (raw text)
 	return rawText, nil;
 }

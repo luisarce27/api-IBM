@@ -7,6 +7,7 @@ import (
 )
 
 //Creation of unit testing
+//Checking if the encrypt works fine
 func Test_Encrypt_Succesfully(t *testing.T){
 	var data string = "Texto a encriptar"
 	
@@ -18,7 +19,7 @@ func Test_Encrypt_Succesfully(t *testing.T){
 
 	fmt.Println(response)
 }
-
+//Checking the encrypt case of empty
 func Test_Encrypt_Empty(t *testing.T){
 	var data string = ""
 	
@@ -30,7 +31,7 @@ func Test_Encrypt_Empty(t *testing.T){
 
 	fmt.Println(response)
 }
-
+//Checing the dencrypt in case of succesfully
 func Test_Dencrypt_Succesfully(t *testing.T){
 	var data string = "a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b4"
 	
@@ -42,7 +43,7 @@ func Test_Dencrypt_Succesfully(t *testing.T){
 
 	fmt.Println(response)
 }
-
+//Checking the dencrypt 
 func Test_Dencrypt_WrongLength(t *testing.T){
 	var data string = "a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b"
 	
@@ -54,7 +55,7 @@ func Test_Dencrypt_WrongLength(t *testing.T){
 
 	fmt.Println(response)
 }
-
+//Cheking the dencrypt with a wrong text
 func Test_Dencrypt_WrongText(t *testing.T){
 	var data string = "a0455169cad6c6ef3b4c3a2d4c860bb0b7143ca4d86314d873f7a6edde560a3e23f4aa5e2470ec91fa71ca79b0"
 	
